@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Bold Statements</title>
+      <link rel="stylesheet" href="{% static 'css/style.css'}">
+   </head>
+   <body>
+      <h1>Bold Statements</h1>
+      <nav>
+         <a href="{% url 'statement_feed' %}">Statement Feed</a>
+         <a href="#">Statistics</a>
+      </nav>
+      {% block content %}
+      {% endblock %}
+   </body>
+</html>

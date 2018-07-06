@@ -1,0 +1,12 @@
+{% extends 'boldstatements/base.html' %}
+
+{% block content %}
+<h2>Statements <a href="">(+)</a></h2>
+<ul>
+    {% for statement in statements %}
+        <li>
+            <a href="{% url 'statement_detail' pk=statement.pk %}" target="_blank">{{ statement.prediction }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

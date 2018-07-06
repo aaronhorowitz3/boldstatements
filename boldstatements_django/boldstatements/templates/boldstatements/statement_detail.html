@@ -1,0 +1,14 @@
+{% extends 'boldstatements/base.html' %}
+
+{% block content %}
+<h2>{{ statement.prediction }}</h2>
+<h4>Stated by: {{ statement.predictor }}</h4>
+
+<p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
+
+<img scr="{{ statement.image }}">
+
+
+
+<p>{{ statement.description }}</p>
+{% endblock %}
