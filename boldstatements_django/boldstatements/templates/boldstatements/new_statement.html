@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>New Statement</h2>
-<form method="POST" class="">
+<form enctype="multipart/form-data" method="POST" class="">
    {% csrf_token %}
    {{ form.as_p }}
    <button type="submit">Submit</button>

@@ -5,7 +5,7 @@ class Statement(models.Model):
     prediction = models.CharField(max_length=500)
     predictor = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='media/images', height_field=350, blank=True)
+    image = models.ImageField(upload_to='static/media/images', blank=True)
     link = models.TextField(blank=True)
     datestamp = models.DateTimeField(auto_now_add=True)
 
