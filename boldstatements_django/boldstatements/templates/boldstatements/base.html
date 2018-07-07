@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Bold Statements</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   </head>
-   <body>
-      <h1>Bold Statements</h1>
+<head>
+   <meta charset="utf-8">
+   <title>Bold Statements</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.css' %}">
+   <link rel="stylesheet" href="/css/master.css">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <script
+   src="https://code.jquery.com/jquery-3.1.1.min.js"
+   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+   crossorigin="anonymous" defer></script>
+   <script src="semantic/dist/semantic.min.js" defer></script>
+</head>
+<body>
+   <header>
+      <h1 class="ui huge header"><span class="">B</span>old <span class="">S</span>tatements</h1>
       <nav>
          <a href="{% url 'statement_feed' %}">Statement Feed</a>
          <a href="#">Statistics</a>
       </nav>
-      {% block content %}
-      {% endblock %}
-   </body>
+   </header>
+   {% block content %}
+   {% endblock %}
+</body>
 </html>

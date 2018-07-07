@@ -1,3 +1,35 @@
 body {
-   background-color: chartreuse;
+   box-sizing: border-box;
+   /* margin-right: 1em;
+   margin-left: 1em; */
+}
+
+header {
+   padding-top: 1em;
+   font-size: 2em;
+   background-color: cornflowerblue;
+}
+
+h1 {
+   color: white;
+}
+
+nav {
+   text-align: left;
+   border: 1px solid lightblue;
+   border-radius: .2em;
+}
+
+nav a {
+   display: inline-block;
+   margin-right: 2em;
+   padding: .5em;
+   padding-left: .2em;
+   border: 1px solid lightgrey;
+   border-radius: .2em;
+   color: white;
+}
+
+nav a:hover {
+   color: navy;
 }
