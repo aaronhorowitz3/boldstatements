@@ -23,14 +23,14 @@ h1 {
 }
 
 .header-row:nth-of-type(2) {
-   margin-left: 35px;
+   margin-left: 40px;
+   margin-top: -13px;
 }
 
 .bs-header {
    font-size: 1.4em;
    color: #dddddd;
    text-shadow: 4px 4px #4183C4;
-   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
 nav {
@@ -48,7 +48,7 @@ nav a {
 
 nav a:hover {
    color: #6EA4BF;
-   background-color: rgba(255, 255, 255, .7)
+   background-color: rgba(255, 255, 255, .7);
 }
 
 .false {
@@ -69,7 +69,7 @@ nav a:hover {
    margin-top: 1em;
    border: 1px solid #6EA4BF;
    border-radius: 0.28571429rem;
-   box-shadow: 1.25px 1.5px #6EA4BF;
+   box-shadow: .5px .5px #6EA4BF;
 }
 
 .ui.item:hover {
@@ -84,10 +84,17 @@ nav a:hover {
 
 .ui.small.image {
    max-width: 150px;
+   padding-left: 1px;
+   border-radius: 0.28571429rem;
 }
 
 .main-feed h2 {
    color: #4183C4;
    font-size: 2em;
    padding-top: .7em;
+}
+
+.prediction-date {
+   font-size: .8em;
+   margin-top: .4em;
 }
