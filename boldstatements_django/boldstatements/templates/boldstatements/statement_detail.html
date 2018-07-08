@@ -1,14 +1,19 @@
 {% extends 'boldstatements/base.html' %}
 
 {% block content %}
-<h2>{{ statement.prediction }}</h2>
-<h4>Stated by: {{ statement.predictor }}</h4>
+<div id="single-statement">
+   <h2>{{ statement.prediction }}</h2>
+   <p>{{ statement.description }}</p>
+   <h4>Stated by: {{ statement.predictor }}</h4>
+   <p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
+   <img src="{{ statement.image.url }}">
+   <h4>Confirmed?</h4>
+   <form action="">
+      <input id="true-radio" type="radio" name="confirmation" value="true"> True | <input id=
+      "false-radio" type="radio" name="confirmation" value="false"> False
+   </form>
+</div>
 
-<p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
-
-<img scr="{{ statement.image }}">
 
 
-
-<p>{{ statement.description }}</p>
 {% endblock %}

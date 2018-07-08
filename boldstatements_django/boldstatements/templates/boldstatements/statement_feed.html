@@ -5,7 +5,7 @@
 <ul>
     {% for statement in statements %}
         <li>
-            <a href="{% url 'statement_detail' pk=statement.pk %}" target="_blank">{{ statement.prediction }}</a>
+            <a href="{% url 'statement_detail' pk=statement.pk %}">{{ statement.prediction }}</a>
         </li>
     {% endfor %}
 </ul>

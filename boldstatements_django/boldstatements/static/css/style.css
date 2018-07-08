@@ -7,29 +7,41 @@ body {
 header {
    padding-top: 1em;
    font-size: 2em;
-   background-color: cornflowerblue;
+   background-color: #6EA4BF;
 }
 
 h1 {
    color: white;
+   display: inline-block;
+   margin-left: 10px;
+   text-transform: uppercase;
+}
+
+.bs-header {
+   font-size: 1.4em;
 }
 
 nav {
    text-align: left;
-   border: 1px solid lightblue;
-   border-radius: .2em;
+   border-top: 4px solid white;
 }
 
 nav a {
    display: inline-block;
-   margin-right: 2em;
    padding: .5em;
-   padding-left: .2em;
-   border: 1px solid lightgrey;
-   border-radius: .2em;
+   padding-left: 10px;
    color: white;
 }
 
 nav a:hover {
-   color: navy;
+   color: #6EA4BF;
+   background-color: white;
+}
+
+.false {
+   background-color: red;
+}
+
+.true {
+   background-color: green;
 }
