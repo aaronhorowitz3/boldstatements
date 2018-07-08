@@ -6,7 +6,10 @@
    <p>{{ statement.description }}</p>
    <h4>Stated by: {{ statement.predictor }}</h4>
    <p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
+   {% if statement.image.url %}
    <img src="{{ statement.image.url }}">
+   
+   {% endif %}
    <h4>Confirmed?</h4>
    <form action="">
       <input id="true-radio" type="radio" name="confirmation" value="true"> True | <input id=
