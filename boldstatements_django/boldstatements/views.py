@@ -26,7 +26,21 @@ def login_user(request):
         return redirect('statement_feed')
     else:
         form = LoginForm()
-    return render(request, 'statements/login.html', {'form': form})
+    return render(request, 'boldstatements/login.html', {'form': form})
+
+def signup_user(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('statement_feed')
+    else:
+        form = UserCreationForm()
+    return render(request, 'boldstatements/signup.html', {'form': form})
 
 @login_required
 def make_a_statement(request):

@@ -3,8 +3,9 @@
 {% block content %}
 <main class="main-feed">
    <h2 class="page-headers">Statements</h2>
+   <p>Sort: &nbsp; <a href="#">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#">Oldest First</a></p>
    <div class="ui items">
-      {% for statement in statements %}
+      {% for statement in statements|dictsortreversed:"datestamp" %}
       <a href="{% url 'statement_detail' pk=statement.pk %}">
          <div class="ui item">
             <div class="ui small image">

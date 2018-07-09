@@ -11,6 +11,7 @@ urlpatterns = [
     path('statements/', include('django.contrib.auth.urls')),
     path('statements/login/', views.login_user, name='login_user'),
     path('statements/logout/', views.logout_user, name='logout_user'),
+    path('statements/signup/', views.signup_user, name='signup_user'),
 ]
 
 if settings.DEBUG:

@@ -84,6 +84,7 @@ nav a:hover {
 }
 
 .ui.small.image {
+   max-height: 250px;
    max-width: 150px;
    padding-left: 1px;
    border-radius: 0.28571429rem;
