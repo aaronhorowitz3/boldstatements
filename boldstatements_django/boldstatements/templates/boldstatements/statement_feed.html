@@ -3,10 +3,10 @@
 {% block content %}
 <main class="main-feed">
    <h2 class="page-headers">Statements</h2>
-   <p>Sort: &nbsp; <a href="#">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#">Oldest First</a></p>
-   <div class="ui items">
-      {% for statement in statements|dictsortreversed:"datestamp" %}
-      <a href="{% url 'statement_detail' pk=statement.pk %}">
+   <p>Sort: &nbsp; <a href="#" id="newer">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#" id="older">Oldest First</a></p>
+   <div class="ui items" id="sorted-feed">
+      {% for statement in statements %}
+      <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
          <div class="ui item">
             <div class="ui small image">
                <img src="{{ statement.image.url }}">

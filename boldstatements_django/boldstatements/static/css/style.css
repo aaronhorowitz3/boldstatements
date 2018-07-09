@@ -156,3 +156,8 @@ nav a:hover {
    color: #6EA4BF !important;
    background-color: rgba(255, 255, 255, .7) !important;
 }
+
+#true-radio, #false-radio {
+   background-color: transparent;
+   fill: red;
+}
