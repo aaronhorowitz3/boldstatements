@@ -6,3 +6,4 @@ class MakeAStatement(forms.ModelForm):
     class Meta:
         model = Statement
         fields = ('prediction', 'predictor', 'description', 'image', 'link')
+    

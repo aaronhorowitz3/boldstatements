@@ -88,7 +88,7 @@ nav a:hover {
    border-radius: 0.28571429rem;
 }
 
-.main-feed h2 {
+.page-headers {
    color: #4183C4;
    font-size: 2em;
    padding-top: .7em;
@@ -97,4 +97,43 @@ nav a:hover {
 .prediction-date {
    font-size: .8em;
    margin-top: .4em;
+}
+
+#single-statement {
+   margin: 10px;
+   padding: 10px 30px 10px 30px;
+   border: 1px solid #4183C4;
+   border-radius: 4px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#single-statement p, .page-headers, #single-statement p a, #single-statement h4, #single-statement form, .header h3, .meta h5, .description p, .prediction-date {
+   color: #1E2D35;
+}
+
+.statement-evidence {
+   background-color: transparent !important;
+   box-shadow: 1px 1px #6EA4BF !important;
+}
+
+.statement-evidence img {
+   border-top: 1px solid #4183C4 !important;
+   border-left: 1px solid #4183C4 !important;
+   border-right: 1px solid #4183C4 !important;
+}
+
+.statement-evidence .content {
+   border-top: 1px solid #4183C4 !important;
+   border-left: 1px solid #4183C4 !important;
+   border-right: 1px solid #4183C4 !important;
+   border-bottom: 1px solid #4183C4 !important;
+   color: #1E2D35 !important;
+   background-color: rgba(255, 255, 255, .25) !important;
+}
+
+.statement-form {
+   margin: 10px;
+   max-width: 500px;
 }

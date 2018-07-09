@@ -2,19 +2,26 @@
 
 {% block content %}
 <div id="single-statement">
-   <h2>{{ statement.prediction }}</h2>
-   <p>{{ statement.description }}</p>
-   <h4>Stated by: {{ statement.predictor }}</h4>
-   <p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
-   {% if statement.image.url %}
-   <img src="{{ statement.image.url }}">
-   
-   {% endif %}
-   <h4>Confirmed?</h4>
-   <form action="">
-      <input id="true-radio" type="radio" name="confirmation" value="true"> True | <input id=
-      "false-radio" type="radio" name="confirmation" value="false"> False
-   </form>
+   <div id="statement-basics">
+      <h2 class="page-headers">{{ statement.prediction }}</h2>
+      <h4 class="predictors">Stated by: {{ statement.predictor }} on {{ statement.datestamp }}</h4>
+      <h4>Confirmed?</h4>
+      <form action="">
+         <input id="true-radio" type="radio" name="confirmation" value="true"> True | <input id=
+         "false-radio" type="radio" name="confirmation" value="false"> False
+      </form>
+   </div>
+   <div class="ui card statement-evidence">
+      <div class="image">
+         {% if statement.image.url %}
+         <img src="{{ statement.image.url }}">
+         {% endif %}
+      </div>
+      <div class="content">
+         <p class="statement-description">{{ statement.description }}</p>
+         <p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
+      </div>
+   </div>
 </div>
 
 

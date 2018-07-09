@@ -2,7 +2,7 @@
 
 {% block content %}
 <main class="main-feed">
-   <h2>Statements</h2>
+   <h2 class="page-headers">Statements</h2>
    <div class="ui items">
       {% for statement in statements %}
       <a href="{% url 'statement_detail' pk=statement.pk %}">

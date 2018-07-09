@@ -1,10 +1,12 @@
 {% extends 'boldstatements/base.html' %}
 
 {% block content %}
-<h2>New Statement</h2>
-<form enctype="multipart/form-data" method="post" class="">
-   {% csrf_token %}
-   {{ form.as_p }}
-   <button type="submit">Submit</button>
-</form>
+<div class="statement-form">
+   <h2>New Statement</h2>
+   <form enctype="multipart/form-data" method="post" class="ui form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="ui button">Submit</button>
+   </form>
+</div>
 {% endblock %}
