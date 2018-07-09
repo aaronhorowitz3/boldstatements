@@ -17,6 +17,14 @@
 <body>
    <header>
       <h1 class="ui huge header"><span class="header-row"><span class="bs-header">B</span>old</span> <span class="header-row"><span class="bs-header">S</span>tatements</span></h1>
+      <div class="auth-links">
+         {% if user.is_authenticated %}
+         <a href="{% url 'logout_user' %}">Log Out</a>
+         {% else %}
+         <a href="#">Sign Up</a>
+         <a href="{% url 'login_user' %}">Log In</a>
+         {% endif %}
+      </div>
       <nav>
          <a href="{% url 'statement_feed' %}">Statement Feed</a>
          <a href="{% url 'make_a_statement' %}"> New Statement</a>

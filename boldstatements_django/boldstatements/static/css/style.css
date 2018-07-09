@@ -25,6 +25,7 @@ h1 {
 .header-row:nth-of-type(2) {
    margin-left: 40px;
    margin-top: -13px;
+   margin-bottom: -40px;
 }
 
 .bs-header {
@@ -136,4 +137,21 @@ nav a:hover {
 .statement-form {
    margin: 10px;
    max-width: 500px;
+}
+
+.auth-links {
+   text-align: right !important;
+}
+
+.auth-links a {
+   color: white !important;
+   display: inline-block !important;
+   padding: .5em !important;
+   padding-left: 10px !important;
+   padding-right: 10px !important;
+}
+
+.auth-links a:hover {
+   color: #6EA4BF !important;
+   background-color: rgba(255, 255, 255, .7) !important;
 }

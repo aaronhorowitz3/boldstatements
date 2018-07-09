@@ -1,12 +1,16 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include
 
 urlpatterns = [
     path('', views.statement_feed, name='statement_feed'),
     path('statements/<int:pk>/', views.statement_detail, name='statement_detail'),
     path('statements/new_statement', views.make_a_statement, name='make_a_statement'),
+    path('statements/', include('django.contrib.auth.urls')),
+    path('statements/login/', views.login_user, name='login_user'),
+    path('statements/logout/', views.logout_user, name='logout_user'),
 ]
 
 if settings.DEBUG:

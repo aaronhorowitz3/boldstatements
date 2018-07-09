@@ -1,0 +1,12 @@
+{% extends 'boldstatements/base.html' %}
+
+{% block content %}
+<div class="statement-form">
+   <h2>Login</h2>
+   <form method="post" class="ui form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="ui button">Login</button>
+   </form>
+</div>
+{% endblock %}
