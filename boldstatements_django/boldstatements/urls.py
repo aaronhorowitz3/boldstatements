@@ -12,6 +12,7 @@ urlpatterns = [
     path('statements/login/', views.login_user, name='login_user'),
     path('statements/logout/', views.logout_user, name='logout_user'),
     path('statements/signup/', views.signup_user, name='signup_user'),
+    path('auth/', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:

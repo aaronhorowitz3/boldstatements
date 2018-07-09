@@ -38,10 +38,10 @@ $(document).ready(function() {
 					html += elements[i].html;
 				}
 				$content[0].innerHTML = html;
-				// $(this).addClass("selected").
-				// siblings().
-				// removeClass("selected");
-				// return false;
+				$(this).addClass("selected").
+				siblings().
+				removeClass("selected");
+				return false;
 
 			});
 
@@ -52,10 +52,10 @@ $(document).ready(function() {
 					html += elements[i].html;
 				}
 				$content[0].innerHTML = html;
-				// $( this ).addClass( "selected" ).
-				// siblings().
-				// removeClass( "selected" );
-				// return false;
+				$( this ).addClass( "selected" ).
+				siblings().
+				removeClass( "selected" );
+				return false;
 
 			});
 	});

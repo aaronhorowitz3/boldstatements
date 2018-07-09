@@ -8,5 +8,8 @@
       {{ form.as_p }}
       <button type="submit" class="ui button">Login</button>
    </form>
+   <br>
+   <p><strong>-- OR --</strong></p>
+   <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
 </div>
 {% endblock %}
