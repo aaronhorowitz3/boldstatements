@@ -17,6 +17,17 @@ def statement_detail(request, pk):
     statement = Statement.objects.get(id=pk)
     return render(request, 'boldstatements/statement_detail.html', {'statement': statement})
 
+def statement_edit(request, pk):
+    statement = Statement.objects.get(id=pk)
+    if request.method == 'POST':
+        form = MakeAStatement(request.POST, instance=statement)
+        if form.is_valid():
+            statement = form.save()
+            return redirect('statement_detail', pk=statement.pk)
+    else:
+        form = MakeAStatement(instance=statement)
+    return render(request, 'boldstatements/new_statement.html', {'form': form})
+
 def login_user(request):
     if request.method == 'POST':
         username = request.POST['username']

@@ -9,7 +9,6 @@ $(document).ready(function() {
             time = $el.find(".prediction-date").text(),
             date = new Date($.trim(time)),
             timestamp = date.getTime();
-
             obj.html = $el[0].outerHTML;
             obj.time = timestamp;
             arr.push(obj);

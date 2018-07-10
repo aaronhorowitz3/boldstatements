@@ -5,7 +5,7 @@
    <h2 class="page-headers">Statements</h2>
    <p>Sort: &nbsp; <a href="#" id="newer">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#" id="older">Oldest First</a></p>
    <div class="ui items" id="sorted-feed">
-      {% for statement in statements %}
+      {% for statement in statements|dictsort:'datestamp' %}
       <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
          <div class="ui item">
             <div class="ui small image">
