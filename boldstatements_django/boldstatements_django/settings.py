@@ -74,11 +74,11 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = (
- 'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
- 'social_core.backends.google.GoogleOpenId',  # for Google authentication
- 'social_core.backends.google.GoogleOAuth2',  # for Google authentication
- 'social_core.backends.github.GithubOAuth2',  # for Github authentication
- 'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
+ 'social_core.backends.open_id.OpenIdAuth',
+ 'social_core.backends.google.GoogleOpenId',
+ 'social_core.backends.google.GoogleOAuth2',
+ 'social_core.backends.github.GithubOAuth2',
+ 'social_core.backends.facebook.FacebookOAuth2',
 
  'django.contrib.auth.backends.ModelBackend',
 )
@@ -134,6 +134,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='1081184564116-jfh2ff61ip75e4263a8r6ncdmn92kfrb.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'pJMC9lHscjHN_QsQ7zuZ2jhO'
+
+SOCIAL_AUTH_GITHUB_KEY = '9f5989ae3958705cd6ec'
+SOCIAL_AUTH_GITHUB_SECRET = '44c97cc7be3a672cbca87030de078df89fb5c26a'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '169979450536014'
 
 STATIC_URL = '/static/'
 
