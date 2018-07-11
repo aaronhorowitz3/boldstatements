@@ -5,9 +5,30 @@
    <h2 class="page-headers">Statements</h2>
    <p>Sort: &nbsp; <a href="#" id="newer">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#" id="older">Oldest First</a></p>
    <div class="ui items" id="sorted-feed">
+      {% for statement in statements|dictsortreversed:'datestamp' %}
+      <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
+         <div class="ui item renderer">
+            <div class="ui small image">
+               <img src="{{ statement.image.url }}">
+            </div>
+            <div class="content">
+               <div class="header"><h3>"{{ statement.prediction }}"</h3></div>
+               <div class="meta">
+                  <h5>-{{ statement.predictor }}</h5>
+               </div>
+               <div class="description">
+                  <p>{{ statement.description }}</p>
+               </div>
+               <div class="prediction-date">stated {{ statement.datestamp }}</div>
+            </div>
+         </div>
+      </a>
+      {% endfor %}
+   </div>
+   <div class="hidden ui items" id="reverse-sorted-feed">
       {% for statement in statements|dictsort:'datestamp' %}
       <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
-         <div class="ui item">
+         <div class="ui item renderer">
             <div class="ui small image">
                <img src="{{ statement.image.url }}">
             </div>

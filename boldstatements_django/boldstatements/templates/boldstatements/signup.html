@@ -1,13 +1,17 @@
 {% extends 'boldstatements/base.html' %}
 
 {% block content %}
-<h2>Sign Up</h2>
-<form method='post' class="sign-up">
-   {% csrf_token %}
-   {{ form.as_p }}
-   <button type='submit'>Sign Up</button>
-</form>
-<br>
-<p><strong>-- OR --</strong></p>
-<a href="{% url 'social:begin' 'google-oauth2' %}">Sign up with Google</a><br>
+<div class="statement-form">
+   <h2>Sign Up</h2>
+   <form method='post' class="sign-up ui form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type='submit' class="ui button logbutts">Sign Up</button>
+   </form>
+   <br>
+   <a href="{% url 'social:begin' 'google-oauth2' %}"><button class="ui button logbutts"><span>Sign up with &nbsp;<i class="fab fa-google"></i></span></button></a> &nbsp;
+   <a href="{% url 'social:begin' 'github' %}"><button class="ui button logbutts"><span>Sign up with &nbsp;<i class="fab fa-github"></i></span></button></a>
+
+</div>
+
 {% endblock %}

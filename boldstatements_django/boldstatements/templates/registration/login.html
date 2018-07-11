@@ -6,14 +6,10 @@
    <form method="post" class="ui form">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="ui button">Login</button>
+      <button type="submit" class="ui button logbutts">Login</button>
    </form>
    <br>
-   <p><strong>-- OR --</strong></p>
-   <a href="{% url 'social:begin' 'google-oauth2' %}">Log in with Google</a>
-   <br>
-   <br>
-   <p><strong>-- OR --</strong></p>
-  <a href="{% url 'social:begin' 'github' %}">Log in with GitHub</a><br>
+   <a href="{% url 'social:begin' 'google-oauth2' %}"><button class="ui button logbutts"><span>Login with &nbsp;<i class="fab fa-google"></i></span></button></a>
+   <a href="{% url 'social:begin' 'github' %}"><button class="ui button logbutts"><span>Login with &nbsp;<i class="fab fa-github"></i></span></button></a>
 </div>
 {% endblock %}
