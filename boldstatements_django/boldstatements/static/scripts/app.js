@@ -9,11 +9,15 @@ $(document).ready(function() {
    older.click(function() {
       newestFirst.addClass('hidden')
       oldestFirst.removeClass('hidden')
+      older.addClass('selected')
+      newer.removeClass('selected')
    })
 
    newer.click(function() {
       newestFirst.removeClass('hidden')
       oldestFirst.addClass('hidden')
+      older.removeClass('selected')
+      newer.addClass('selected')
    })
 
    let statementContainer = $('#single-statement')

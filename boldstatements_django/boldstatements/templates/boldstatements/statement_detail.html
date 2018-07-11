@@ -22,6 +22,10 @@
          <p><a href="{{ statement.link }}" target="_blank" style="text-decoration: none">Source &#10697; </a></p>
       </div>
    </div>
+   <div class="confirmation-data">
+      <h3>Can you verify?</h3>
+      <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts">Confirm/Refute</button></a>
+   </div>
 </div>
 
 

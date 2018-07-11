@@ -6,7 +6,7 @@ class MakeAStatement(forms.ModelForm):
 
     class Meta:
         model = Statement
-        fields = ('prediction', 'predictor', 'description', 'image', 'link')
+        fields = ('prediction', 'predictor', 'description', 'image', 'link', 'confirmation', 'confirmation_source')
 
 class LoginForm(forms.ModelForm):
     username = CharField(max_length=100)

@@ -172,7 +172,7 @@ nav a:hover {
    border: none;
    vertical-align: baseline;
    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-   margin: 0em 0.25em 0em 0em;
+   margin: 0em 0em 0em 0em !important;
    padding: 0.78571429em 1.5em 0.78571429em;
    line-height: 1.2em;
 }
@@ -216,4 +216,8 @@ footer {
 
 .hidden {
    display: none;
+}
+
+.confirmation-data {
+   text-align: center;
 }
