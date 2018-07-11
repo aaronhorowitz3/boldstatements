@@ -20,11 +20,17 @@ $(document).ready(function() {
       newer.addClass('selected')
    })
 
-   let singleStatement = $('#single-statement')
-   let userConf = $('#user-conf')
-
-   if (userConf.innerHTML === "True!") {
-      singleStatement.addClass("true")
-   }
+   // let singleStatement = $('#single-statement')
+   // let userConf = $('#user-conf')
+   // 
+   // if userConf.innerHTML === "True!" function() {
+   //    singleStatement.addClass("true")
+   //    singleStatement.removeClass("false")
+   // }
+   //
+   // if (userConf.innerHTML === "False!") function() {
+   //    singleStatement.addClass("false")
+   //    singleStatement.removeClass("true")
+   // }
 
 })
