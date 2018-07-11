@@ -6,12 +6,12 @@
    <p>Sort: &nbsp; <a href="#" id="newer">Newest First</a> &nbsp; &nbsp;| &nbsp;&nbsp; <a href="#" id="older">Oldest First</a></p>
    <div class="ui items" id="sorted-feed">
       {% for statement in statements|dictsortreversed:'datestamp' %}
-      <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
-         <div class="ui item renderer">
-            <div class="ui small image">
-               <img src="{{ statement.image.url }}">
-            </div>
-            <div class="content">
+      <div class="ui item renderer">
+         <div class="ui small image">
+            <img src="{{ statement.image.url }}">
+         </div>
+         <div class="content">
+            <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
                <div class="header"><h3>"{{ statement.prediction }}"</h3></div>
                <div class="meta">
                   <h5>-{{ statement.predictor }}</h5>
@@ -20,19 +20,25 @@
                   <p>{{ statement.description }}</p>
                </div>
                <div class="prediction-date">stated {{ statement.datestamp }}</div>
-            </div>
+            </a>
          </div>
-      </a>
+         <div>
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
+            {% if statement.confirmation %}
+            <h4>Previously reported: <span>{{ statement.confirmation }}</span></h4>
+               {% endif %}
+         </div>
+      </div>
       {% endfor %}
    </div>
    <div class="hidden ui items" id="reverse-sorted-feed">
       {% for statement in statements|dictsort:'datestamp' %}
-      <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
-         <div class="ui item renderer">
-            <div class="ui small image">
-               <img src="{{ statement.image.url }}">
-            </div>
-            <div class="content">
+      <div class="ui item renderer">
+         <div class="ui small image">
+            <img src="{{ statement.image.url }}">
+         </div>
+         <div class="content">
+            <a href="{% url 'statement_detail' pk=statement.pk %}" class="in-sort-order">
                <div class="header"><h3>"{{ statement.prediction }}"</h3></div>
                <div class="meta">
                   <h5>-{{ statement.predictor }}</h5>
@@ -41,9 +47,15 @@
                   <p>{{ statement.description }}</p>
                </div>
                <div class="prediction-date">stated {{ statement.datestamp }}</div>
-            </div>
+            </a>
          </div>
-      </a>
+         <div>
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
+            {% if statement.confirmation %}
+            <h4>Previously reported: <span>{{ statement.confirmation }}</span></h4>
+               {% endif %}
+         </div>
+      </div>
       {% endfor %}
    </div>
 </main>

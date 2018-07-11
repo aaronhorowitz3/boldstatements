@@ -53,11 +53,11 @@ nav a:hover {
 }
 
 .false {
-   background-color: red;
+   background-color: red !important;
 }
 
 .true {
-   background-color: green;
+   background-color: green !important;
 }
 
 .main-feed {
@@ -220,4 +220,13 @@ footer {
 
 .confirmation-data {
    text-align: center;
+}
+
+.feedbutts {
+   margin-right: 50px !important;
+}
+
+.renderer {
+   display: flex;
+   align-items: center;
 }

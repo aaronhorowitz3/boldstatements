@@ -2,6 +2,7 @@ from datetime import datetime, timedelta, tzinfo
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Statement(models.Model):
     prediction = models.CharField(max_length=500)
@@ -11,14 +12,14 @@ class Statement(models.Model):
     link = models.TextField(blank=True)
     datestamp = models.DateTimeField(auto_now_add=True)
     users = models.ManyToManyField(User)
-    TRUE = 'T'
-    FALSE = 'F'
+    TRUE = 'True!'
+    FALSE = 'False!'
     CONFIRMATION_CHOICES = (
         (TRUE, 'True'),
         (FALSE, 'False'),
     )
     confirmation = models.CharField(
-        max_length=2,
+        max_length=6,
         choices = CONFIRMATION_CHOICES,
         blank=True,
     )

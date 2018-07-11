@@ -20,19 +20,11 @@ $(document).ready(function() {
       newer.addClass('selected')
    })
 
-   let statementContainer = $('#single-statement')
-   let trueRadio = $('#true-radio')
-   let falseRadio = $('#false-radio')
+   let singleStatement = $('#single-statement')
+   let userConf = $('#user-conf')
 
-   trueRadio.change(function() {
-      statementContainer.addClass('true')
-      statementContainer.removeClass('false')
-   })
-
-   falseRadio.change(function() {
-      statementContainer.addClass('false')
-      statementContainer.removeClass('true')
-   })
-
+   if (userConf.innerHTML === "True!") {
+      singleStatement.addClass("true")
+   }
 
 })

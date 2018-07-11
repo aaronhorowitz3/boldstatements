@@ -5,11 +5,9 @@
    <div id="statement-basics">
       <h2 class="page-headers">{{ statement.prediction }}</h2>
       <h4 class="predictors">Stated by: {{ statement.predictor }} on {{ statement.datestamp }}</h4>
-      <h4>Confirmed?</h4>
-      <form action="">
-         <input id="true-radio" type="radio" name="confirmation" value="true"> True | <input id=
-         "false-radio" type="radio" name="confirmation" value="false"> False
-      </form>
+      {% if statement.confirmation %}
+      <h4>Confirmed to be: <span id="user-conf">{{ statement.confirmation }}</span></h4>
+      {% endif %}
    </div>
    <div class="ui card statement-evidence">
       <div class="image">
