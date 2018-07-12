@@ -23,10 +23,12 @@
             </a>
          </div>
          <div>
-            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
             {% if statement.confirmation %}
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts greyback">Confirm/Refute</button></a>
             <h4>Previously reported: <span>{{ statement.confirmation }}</span></h4>
-               {% endif %}
+            {% else %}
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
+            {% endif %}
          </div>
       </div>
       {% endfor %}
@@ -50,10 +52,12 @@
             </a>
          </div>
          <div>
-            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
             {% if statement.confirmation %}
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts greyback">Confirm/Refute</button></a>
             <h4>Previously reported: <span>{{ statement.confirmation }}</span></h4>
-               {% endif %}
+            {% else %}
+            <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts feedbutts">Confirm/Refute</button></a>
+            {% endif %}
          </div>
       </div>
       {% endfor %}

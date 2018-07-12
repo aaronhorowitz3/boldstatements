@@ -6,7 +6,7 @@ body {
 header {
    padding-top: 1em;
    font-size: 1.7em;
-   background-color: #6EA4BF;
+   background-color: #000080;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 .bs-header {
    font-size: 1.4em;
    color: #dddddd;
-   text-shadow: 4px 4px #4183C4;
+   text-shadow: 3px 3px #77b4ef;
 }
 
 nav {
@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-   color: #6EA4BF;
+   color: #000080;
    background-color: white;
 }
 
@@ -68,9 +68,9 @@ nav a:hover {
 .ui.item {
    display: flex;
    margin-top: 1em;
-   border: 1px solid #6EA4BF;
+   border: 1px solid #000080;
    border-radius: 0.28571429rem;
-   box-shadow: .5px .5px #6EA4BF;
+   box-shadow: .5px .5px #000080;
 }
 
 .ui.item:hover {
@@ -95,7 +95,7 @@ nav a:hover {
 }
 
 .page-headers {
-   color: #4183C4;
+   color: #000080;
    font-size: 2em;
    padding-top: .7em;
 }
@@ -108,7 +108,7 @@ nav a:hover {
 #single-statement {
    margin: 10px;
    padding: 10px 30px 10px 30px;
-   border: 1px solid #4183C4;
+   border: 1px solid #000080;
    border-radius: 4px;
    display: flex;
    justify-content: space-between;
@@ -121,20 +121,22 @@ nav a:hover {
 
 .statement-evidence {
    background-color: transparent !important;
-   box-shadow: 1px 1px #6EA4BF !important;
+   box-shadow: 1px 1px #000080 !important;
+   margin-left: 1.5em !important;
+   margin-right: 1.5em !important;
 }
 
 .statement-evidence img {
-   border-top: 1px solid #4183C4 !important;
-   border-left: 1px solid #4183C4 !important;
-   border-right: 1px solid #4183C4 !important;
+   border-top: 1px solid #000080 !important;
+   border-left: 1px solid #000080 !important;
+   border-right: 1px solid #000080 !important;
 }
 
 .statement-evidence .content {
-   border-top: 1px solid #4183C4 !important;
-   border-left: 1px solid #4183C4 !important;
-   border-right: 1px solid #4183C4 !important;
-   border-bottom: 1px solid #4183C4 !important;
+   border-top: 1px solid #000080 !important;
+   border-left: 1px solid #000080 !important;
+   border-right: 1px solid #000080 !important;
+   border-bottom: 1px solid #000080 !important;
    color: #1E2D35 !important;
    background-color: rgba(255, 255, 255, .25) !important;
 }
@@ -158,13 +160,13 @@ nav a:hover {
 }
 
 .auth-links a:hover {
-   color: #6EA4BF !important;
+   color: #000080 !important;
    background-color: white !important;
 }
 
 .logbutts {
    color: white !important;
-   background-color: #6EA4BF !important;
+   background-color: #000080 !important;
    border-radius: 0 !important;
    font-size: 1.1em !important;
    font-weight: normal !important;
@@ -181,6 +183,10 @@ nav a:hover {
    line-height: 1.2em;
 }
 
+.greyback {
+   background-color: #8686b7 !important;
+}
+
 .sign-up {
    max-width: 500px;
 }
@@ -190,7 +196,7 @@ nav a:hover {
 }
 
 .logbutts:hover {
-   color: #6EA4BF !important;
+   color: #000080 !important;
    background-color: white !important;
 }
 
@@ -206,7 +212,7 @@ nav a:hover {
 footer {
    padding: 30px 10px 30px 10px;
    margin-top: 50px;
-   background-color: #6EA4BF;
+   background-color: #000080;
    color: white;
    text-transform: uppercase;
    font-family: "Lato", sans-serif;
@@ -215,7 +221,7 @@ footer {
 .footer-bs {
    font-size: 1.4em;
    color: #dddddd;
-   text-shadow: 2px 2px #4183C4;
+   text-shadow: 1.5px 1.5px #77b4ef;
 }
 
 .hidden {
@@ -233,4 +239,6 @@ footer {
 .renderer {
    display: flex;
    align-items: center;
+   border: 1px solid #000080 !important;
+   border-radius: 4px !important;
 }

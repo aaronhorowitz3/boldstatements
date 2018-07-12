@@ -21,8 +21,13 @@
       </div>
    </div>
    <div class="confirmation-data">
+      {% if statement.confirmation %}
+      <h3>This Statement has been verified. Need to dispute the result?</h3>
+      <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts greyback">Dispute</button></a>
+      {% else %}
       <h3>Can you verify?</h3>
       <a href="{% url 'statement_edit' pk=statement.pk %}"><button type="button" name="button" class="ui button logbutts">Confirm/Refute</button></a>
+      {% endif %}
    </div>
 </div>
 
