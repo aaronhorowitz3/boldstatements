@@ -1,1 +1,1 @@
-web: gunicorn boldstatements.wsgi --log-file -
+web: gunicorn boldstatements_django.wsgi --log-file -
